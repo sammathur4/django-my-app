@@ -1,17 +1,12 @@
-name: Run tests
-on: push
+name: Deploy to Development
+
+on:
+  push:
+    branches:
+      - development
+
 jobs:
-  execute_tests:
-    name: Install requirements and execute tests
-    runs-on: ubuntu-latest
-    steps:
-      - name: Debug
-        run: |
-          pwd
-          ls
-      - name: Update
-        run: sudo apt update
-      - name: Install pip
-        run: sudo apt install python3-pip
-      - name: Install requirements
-        run: pip install -r req.txt
+    deploy_prod:
+      runs-on: ubuntu-latest
+      steps:
+        - run: "bash /home/ubuntu/PROJECT/script_for_be.sh"

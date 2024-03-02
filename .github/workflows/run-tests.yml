@@ -1,4 +1,4 @@
-name: Deploy to Main.
+name: Deploy to Main
 
 on:
   push:
@@ -6,17 +6,20 @@ on:
       - main
 
 jobs:
-    deploy_prod:
-      runs-on: ubuntu-latest
-      
-        
-      steps:
-        - name : Change Dir
-          run: "bash cd ../"
-        - name: Debug
-          run: |
-              pwd
-              ls
+  deploy_prod:
+    runs-on: ubuntu-latest
 
-        - run: "bash PROJECT/script_for_be.sh"
-        
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Change to projects directory
+        run: cd home/ubuntu/projects
+
+      - name: Debug
+        run: |
+          pwd
+          ls
+
+      - name: Run Script
+        run: bash PROJECT/script_for_be.sh

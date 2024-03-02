@@ -9,5 +9,10 @@ jobs:
     deploy_prod:
       runs-on: ubuntu-latest
       steps:
+        - name: Debug
+          run: |
+              pwd
+              ls
+
         - run: "bash PROJECT/script_for_be.sh"
         

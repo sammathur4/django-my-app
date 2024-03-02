@@ -1,4 +1,4 @@
-name: Deploy to Development
+name: Deploy to Main.
 
 on:
   push:
@@ -9,5 +9,5 @@ jobs:
     deploy_prod:
       runs-on: ubuntu-latest
       steps:
-        - run: "bash /home/ubuntu/PROJECT/script_for_be.sh"
+        - run: "bash PROJECT/script_for_be.sh"
         

@@ -10,3 +10,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - run: "bash /home/ubuntu/PROJECT/script_for_be.sh"
+        

@@ -1,2 +1,14 @@
 name: Run tests
 on: push
+jobs:
+  execute_tests:
+    name: Install requirements and execute tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update
+        run: sudo apt update
+
+      - name: Install pip
+        run: sudo apt install python3-pip
+      - name: Install requirements
+        run: pip install -r req.txt

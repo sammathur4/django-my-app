@@ -16,6 +16,10 @@ jobs:
         run: |
           pwd
           ls
+      - name : Change dir
+        run : |
+          cd /home/ubuntu/
+          ls
       
 
       - name: Run Script

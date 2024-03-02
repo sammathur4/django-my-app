@@ -8,10 +8,11 @@ on:
 jobs:
     deploy_prod:
       runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: .
+      
+        
       steps:
+        - name : Change Dir
+          run: "bash cd ../"
         - name: Debug
           run: |
               pwd

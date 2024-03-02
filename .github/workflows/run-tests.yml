@@ -12,14 +12,11 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Change to projects directory
-        run: cd $HOME/projects
-
       - name: Debug
         run: |
           pwd
           ls
+      
 
       - name: Run Script
         run: bash PROJECT/script_for_be.sh

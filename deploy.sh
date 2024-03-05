@@ -1,5 +1,5 @@
 # Change to the project directory
-
+ls
 cd /home/ubuntu/project
 
 #Update the code from the repository

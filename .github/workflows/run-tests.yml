@@ -20,13 +20,9 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
-            
-            cd project
+            cd /home/ubuntu/project/django_ci_cd/myproject
             git pull origin main
             source ./venv/bin/activate
             pip install -r req.txt
-            python django_ci_cd/myproject/manage.py makemigrations
-            python django_ci_cd/myproject/manage.py migrate
-            python django_ci_cd/myproject/manage.py runserver 0.0.0.0:8000
-
-            
+            python manage.py makemigrations
+            python manage.py migrate

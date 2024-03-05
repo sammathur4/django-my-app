@@ -14,3 +14,4 @@ pip install -r req.txt
 # Apply database migrations
 python /home/ubuntu/project/django_ci_cd/myproject/manage.py makemigrations
 python /home/ubuntu/project/django_ci_cd/myproject/manage.py migrate
+python /home/ubuntu/project/django_ci_cd/myproject/manage.py runserver 0.0.0.0:8000

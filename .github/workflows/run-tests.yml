@@ -20,10 +20,6 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_PRIVATE_KEY }}
           script: |
-            cd /home/ubuntu/project/django_ci_cd/myproject
-            git pull origin main
-            source ./venv/bin/activate
-            pip install -r req.txt
-            python manage.py makemigrations
-            python manage.py migrate
+            script: |
+            ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} '/home/ubuntu/deploy.sh'
             

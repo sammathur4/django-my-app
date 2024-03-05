@@ -6,7 +6,7 @@ cd /home/ubuntu/project
 git pull origin main
 
 # Activate the virtual environment
-source /home/ubuntu/project/.venv/bin/activate
+source /home/ubuntu/project/venv/bin/activate
 
 # Install dependencies
 pip install -r req.txt
